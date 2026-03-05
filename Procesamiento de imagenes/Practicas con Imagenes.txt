@@ -1,0 +1,1 @@
+Carpeta para guardar las practicas de MULTIMEDIA 2026-2, que se refieren al procesamiento o manejo de archivos de tipo imagen.
