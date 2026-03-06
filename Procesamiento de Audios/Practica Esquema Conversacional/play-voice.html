@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esquema Conversacional</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #f0f4f8;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    label {
+      font-size: 14px;
+      color: #555;
+    }
+    select, input[type="range"] {
+      width: 100%;
+      margin-top: 5px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    button {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #btn-speak  { background: #4CAF50; color: white; }
+    #btn-pause  { background: #2196F3; color: white; }
+    #btn-stop   { background: #f44336; color: white; }
+    button:hover { opacity: 0.85; }
+    #output-area {
+      margin-top: 15px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      color: #444;
+      min-height: 40px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Practica Esquema Conversacional</h2>
+
+  <textarea id="input-area" placeholder="Escribe aquí el texto si no puedes hablar..."></textarea>
+
+  <div class="buttons">
+    <button id="btn-speak" onclick="speak(document.getElementById('input-area').value)">▶ Reproducir</button>
+    <button id="listen-button" onclick="listen()">🎤 Escuchar</button>        
+  </div>
+  
+  <div id="output-area">El estado aparecerá aquí...</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
